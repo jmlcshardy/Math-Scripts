@@ -1,0 +1,26 @@
+hd = int(input("High deg: "))
+
+eq = []
+for i in range(hd+1):
+  dg = int(input(("degree "+str(hd-i)+ ": ")))
+  eq.append(dg)
+
+while True:
+  rt = input("Root: ")
+  
+  if "s" in rt:
+    rt = rt[1:]
+    rt = sqrt(int(rt))
+  else:
+    rt = int(rt)
+  lastn = 0
+  for i in eq:
+    lastn = (i + lastn) * rt
+    
+  if lastn < 0.000001:
+    lastn = 0
+  print(lastn)
+  
+  go = input("Again? (y/n): ")
+  if go != "y":
+    break

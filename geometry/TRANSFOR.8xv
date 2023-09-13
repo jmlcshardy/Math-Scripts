@@ -1,0 +1,36 @@
+print("""
+(1)translatios
+(2)rotations
+(3)reflections
+(4)dilations
+""")
+t=int(input(": "))
+x=int(input("x: "))
+y=int(input("y: "))
+
+if t == 1:
+  xf=int(input("x num: "))
+  yf=int(input("y num: "))
+  
+  print(x + xf, y + yf)
+elif t == 2:
+  rot=input("rotation (cw): ")
+  if rot == "90":
+    print(y, -x)
+  elif rot == "180":
+    print(-x, -y)
+  elif rot == "270":
+    print(-y, x)
+elif t == 3:
+  ref=input("axis: ")
+  if ref == "x":
+    print(x, -y)
+  elif ref == "y":
+    print(-x, y)
+  elif ref == "xy":
+    print(y, x)
+  elif ref == "-xy":
+    print(-y, -x)
+elif t == 4:
+  k=float(input("scale factor: "))
+  print(x * k, y * k)

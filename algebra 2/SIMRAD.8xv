@@ -1,0 +1,16 @@
+i = ""
+pq=[1,4,9,16,25,36,49,64,81,100]
+n = int(input("Number: "))
+
+if n < 0:
+  i = "i"
+  n = abs(n)
+
+fpq = []
+for num in pq:
+  if n % num == 0:
+    fpq.append(num)
+
+mpq = max(fpq)
+
+print(str(int(sqrt(mpq)))+i+" sqrt("+str(int(n/mpq))+")")
